@@ -134,25 +134,41 @@
 
 // find the sum of array if the length of array if 3 or more than three using promises other wise reject the promise
 
-let arr = [10, 20 ,40 ,5];
+// let arr = [10, 20 ,40 ,5];
 
-let z = new Promise((resolve, reject) => {
-    let length = arr.length;  //2
-    if(length >= 3){
-        let sum = 0;
-        for(let i=0; i<arr.length;i++){
-            sum = sum+arr[i]
-        }
-        resolve(sum)
-    }
-    else{
-        reject("array length is less than three")
-    }
+// let z = new Promise((resolve, reject) => {
+//     let length = arr.length;  //2
+//     if(length >= 3){
+//         let sum = 0;
+//         for(let i=0; i<arr.length;i++){
+//             sum = sum+arr[i]
+//         }
+//         resolve(sum)
+//     }
+//     else{
+//         reject("array length is less than three")
+//     }
+// })
+// .then((ans)=>console.log(ans))  //
+// .catch((ans)=>console.log(ans))
+
+// https://github.com/shubhamkumar123456/TG-409-A9.git
+
+
+
+// setTimeout(()=>{
+//     console.log("one")
+// },3000)
+
+// console.log("two")
+
+let ans = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+    resolve("one")
+},3000)
 })
-.then((ans)=>console.log(ans))  //
-.catch((ans)=>console.log(ans))
-
-
+.then((ans)=>console.log(ans))
+.then(()=>console.log("two"))
 
 
 
