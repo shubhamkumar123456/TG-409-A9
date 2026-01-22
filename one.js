@@ -174,11 +174,40 @@
 // https://dummyjson.com/products
 
 let res = fetch('https://dummyjson.com/products') //return promise
-.then((ans)=>ans.json()).then((ans)=>console.log(ans))
+.then((ans)=>ans.json()).then((ans)=>{
+    // console.log(ans.products)
+    for(let i=0; i<ans.products.length; i++){
+        // console.log(ans.products[i])
+        console.log(ans.products[i].title)
+        // let headingTag = document.createElement('h1')
+        // headingTag.innerHTML =ans.products[i].title
+
+        let imageTag = document.createElement('img');
+        imageTag.src = ans.products[i].thumbnail
+        document.querySelector('body').append(imageTag)
+    }
+})
 .catch((ans)=>console.log(ans))
 
 
 
+
+// let arr = [ 10 , 20 ,30 ,40 ,50];
+
+// for(let i= 0; i<arr.length; i++){
+//     console.log(arr[i])  //10
+// }
+
+// let arr = [
+//     {name:"one" ,age:22},  //0
+//     {name:"two" ,age:21}, //1
+//     {name:"three" ,age:32}, //2
+//     {name:"four" ,age:42}, //3
+// ]
+
+// for(let i = 0; i<arr.length; i++){
+//     console.log(arr[i].age)
+// }
 
 
 
