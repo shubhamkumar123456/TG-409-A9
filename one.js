@@ -162,13 +162,23 @@
 
 // console.log("two")
 
-let ans = new Promise((resolve, reject) => {
-    setTimeout(()=>{
-    resolve("one")
-},3000)
-})
-.then((ans)=>console.log(ans))
-.then(()=>console.log("two"))
+// let ans = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//     resolve("one")
+// },3000)
+// })
+// .then((ans)=>console.log(ans))
+// .then(()=>console.log("two"))
+
+
+// https://dummyjson.com/products
+
+let res = fetch('https://dummyjson.com/products') //return promise
+.then((ans)=>ans.json()).then((ans)=>console.log(ans))
+.catch((ans)=>console.log(ans))
+
+
+
 
 
 
