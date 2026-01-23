@@ -1,7 +1,7 @@
 // create a package.json file -->  npm init -y
 
 // CRUD --> create, read, update, delete
-const fs = require('fs')
+// const fs = require('fs')
 
 // 1) create a file using fs module -->
 // fs.writeFileSync('one.pdf' , 'hello how are you')
