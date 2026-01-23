@@ -1,0 +1,20 @@
+{
+  "name": "tg-409-a9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fileSystem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamkumar123456/TG-409-A9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhamkumar123456/TG-409-A9/issues"
+  },
+  "homepage": "https://github.com/shubhamkumar123456/TG-409-A9#readme"
+}
