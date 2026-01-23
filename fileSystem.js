@@ -18,7 +18,21 @@ const fs = require('fs')
 // fs.appendFileSync('two.pdf', ' , this is an additional text')
 
 //5) delete file -->
-// fs.unlinkSync('two.pdf')
+// fs.unlinkSync('three.html')
 
 //6) create a folder --> 
-fs.mkdirSync('pages');
+// fs.mkdirSync('pages');
+
+// https://github.com/shubhamkumar123456/TG-409-A9.git
+
+
+// fs.writeFileSync('three.html', `<html>
+//         <head></head>
+//         <body>
+//             <h1>This is heading</h1>
+//         </body>
+//     </html>`)
+
+// fs.writeFileSync('pages/three.js', 'console.log("hello")')
+
+
