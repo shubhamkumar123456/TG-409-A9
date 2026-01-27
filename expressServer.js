@@ -1,6 +1,18 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = 8090;
+const cors = require('cors')
+
+
+app.use(cors())
+app.use(express.json())   // data parse;
+
+// Middleware --> middleware are functions that have the access of requesting to an object and  responding to an object. they can also modify the request and response 
+
+app.use((req, res , next)=>{
+    console.log("hello i am middleware")
+    next()
+})
 
 app.get('/' , (req, res)=>{
   res.send('welcome page')  
@@ -15,6 +27,12 @@ app.get('/products' , (req, res)=>{
         {name:"Oppo" , price:20000, rating:2},
     ]
     res.json({allProducts: products})
+})
+
+
+app.post('/register', (req, res)=>{
+    console.log(req.body)
+    res.json({msg:"all ok"})
 })
 
 

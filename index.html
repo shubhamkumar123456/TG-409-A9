@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="name" placeholder="enter your name">
+    <input type="email" id="email" placeholder="enter your email">
+    <input type="password" id="password" placeholder="enter your password">
+    <button onclick="xyz()">submit</button>
+
+    <script>
+
+        let nameInput = document.getElementById('name')
+        let emailInput = document.getElementById('email')
+        let passwordInput = document.getElementById('password')
+        // console.log(nameInput)
+        // console.log(emailInput)
+        // console.log(passwordInput)
+
+       async function xyz(){
+            // console.log("hello")
+            // console.log(nameInput.value)
+
+            let obj = {
+                name: nameInput.value,
+                email: emailInput.value,
+                password:passwordInput.value
+            }
+            console.log(obj)
+
+            let res = await fetch('http://localhost:8090/register',{
+                method:"POST",
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify(obj)
+            })
+
+            let data = await res.json();
+            console.log(data)
+        }
+
+    
+    </script>
+</body>
+</html>
