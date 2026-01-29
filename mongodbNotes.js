@@ -22,3 +22,6 @@
 // a)update single Data --> db.collectionName.updateOne({key:value}  , {$set:{key:value}})
 // a)update multiple Data --> db.collectionName.updateMany({key:value}  , {$set:{key:value}})
 
+
+
+
