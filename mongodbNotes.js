@@ -23,5 +23,12 @@
 // a)update multiple Data --> db.collectionName.updateMany({key:value}  , {$set:{key:value}})
 
 
+//7) delete Data -->
+// a)delete Single Data --> db.collectionName.deleteOne({key:value})
+// b)delete Multiple Data --> db.collectionName.deleteMany({key:value})
 
+//8) delete a collection --> db.collectionName.drop()
+//9) delete a database ==> db.dropDatabase()
+// other filter method --> $lt , $lte , $et, $gt , $gte
+// example --> db.products.find({rating:{$gte:4.5}})
 
