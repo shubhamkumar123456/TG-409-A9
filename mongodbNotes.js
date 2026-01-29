@@ -13,4 +13,12 @@
     // b)isert multiple Data --> db.collectionName.insertMany([{} , {} , {}  ,{}])
 
 // Question --> insert 5 data inside product collection 
-// 5)
+
+// 5) get data  --> 
+//a) get all data present inside a collection --> db.collectionName.find() 
+//b) get single Data only --> db.collectionName.findOne({key :value})
+
+//6) update Data --> 
+// a)update single Data --> db.collectionName.updateOne({key:value}  , {$set:{key:value}})
+// a)update multiple Data --> db.collectionName.updateMany({key:value}  , {$set:{key:value}})
+
