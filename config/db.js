@@ -21,4 +21,16 @@ async function main() {
   return collection;
 }
 
-module.exports = main
+async function main1() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('products');
+
+  // the following code examples can be pasted here...
+
+  return collection;
+}
+
+module.exports = {main , main1}

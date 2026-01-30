@@ -3,7 +3,7 @@ const app = express();
 const port = 8090;
 const cors = require('cors')
 
-const main = require('./config/db') ///main function
+const {main,main1} = require('./config/db') ///main function
 
 app.use(cors())
 app.use(express.json())   // data parse;
@@ -33,10 +33,23 @@ app.get('/products' , (req, res)=>{
 
 app.post('/register',async (req, res)=>{
     // console.log(req.body)
-    let collection = await main()
+    let collection = await main() //user collection
     let data = await collection.insertOne(req.body)
     res.json({msg:"user registered"})
 })
+
+
+
+app.post('/create/products',async(req,res)=>{
+    let collection = await main1()  //product collection
+    let data = await collection.insertOne(req.body);
+    res.json({msg:"data created successfully"})
+})
+
+
+
+
+
 
 
 
