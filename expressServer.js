@@ -3,6 +3,7 @@ const app = express();
 const port = 8090;
 const cors = require('cors')
 
+const main = require('./config/db') ///main function
 
 app.use(cors())
 app.use(express.json())   // data parse;
@@ -30,9 +31,11 @@ app.get('/products' , (req, res)=>{
 })
 
 
-app.post('/register', (req, res)=>{
-    console.log(req.body)
-    res.json({msg:"all ok"})
+app.post('/register',async (req, res)=>{
+    // console.log(req.body)
+    let collection = await main()
+    let data = await collection.insertOne(req.body)
+    res.json({msg:"user registered"})
 })
 
 
